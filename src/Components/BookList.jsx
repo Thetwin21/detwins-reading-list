@@ -4,7 +4,6 @@ import BookDetails from './BookDetails'
 
 const BookList = () => {
     const { books } = useContext(BookContext)
-   
     return  books.length ? (
         <div className='booklist'>
             <ul>
@@ -17,7 +16,7 @@ const BookList = () => {
     ) : (
         <div className='empty'>
             <h3>No Books Available</h3>
-            <p>You're free today , add a book and keep leae=rning</p>
+            <p>You're free today , add a book and keep learning</p>
 
         </div>
     )
