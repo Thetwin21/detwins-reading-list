@@ -1,38 +1,116 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+.container {
+  position: relative;
+  background: rgb(240, 237, 237);
+  margin: 20px auto;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  scroll-margin: 50px 0 0 50px;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  background: rgba(136, 135, 135, 0.397);
+  padding: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.booklist {
+  padding: 2px 1.2em;
+  width: 100%;
+  height: 70%;
+}
+.booklist ul {
+  margin: .8em auto;
+  width: 100%;
+  height: 100%;
   display: flex;
+  overflow-y: scroll;
   flex-direction: column;
-  align-items: center;
+  gap: .7em;
+}
+.booklist ul::-webkit-scrollbar {
+  width: 0;
+}
+.bookDetails {
+  position: relative;
+  background: rgb(192, 182, 182);
+  text-align: start;
+  text-transform: capitalize;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.bookDetails .tool-tip {
+  position: absolute;
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(240, 237, 237);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+
+}
+.bookDetails:hover .tool-tip {
+  visibility: visible;
+}
+.bookDetails:hover {
+  text-decoration: line-through;
+  background: rgba(129, 122, 122, 0.838);
+}
+.empty {
+  text-align: center;
+  padding: 1.2rem;
+}
+.form {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  font-weight: 600;
+  background: rgb(192, 182, 182);
+  gap: .5em;
 }
-
-.App-link {
-  color: #61dafb;
+.form span {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
 }
+.form button,
+.form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+.form button {
+  display: flex;
+  cursor: pointer;
+  /* border: none; */
+  background: rgb(192, 182, 182);
+  padding: 8px;
+  font-weight: 700;
+}
+@media (min-width:450px) {
+ .container {
+    max-width: 500px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
